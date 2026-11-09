@@ -1,0 +1,78 @@
+{
+  "checked_at_utc": "2026-11-09T13:01:37.297409+00:00",
+  "authentication": "anonymous requests without Authorization header",
+  "repository_public": true,
+  "commit": "95e1f90f116a8c67d6b9d9e97daf9e40f3ea4911",
+  "all_tracked_files_match_remote_tree": true,
+  "tracked_files": 134,
+  "repository_page_status": 200,
+  "report_page_status": 200,
+  "raw_file_checks": [
+    {
+      "path": "report/正式报告.pdf",
+      "anonymous_http_status": 200,
+      "matches_local": true,
+      "sha256": "6bae410d8405556d34913d03a56627b6e2a888c6344e2cdbf503c01a22fffca0"
+    },
+    {
+      "path": "report/正式报告.tex",
+      "anonymous_http_status": 200,
+      "matches_local": true,
+      "sha256": "5a819a408f8c28b7d913985ab324a2eab43706d113a8b2d5a0bc72d65a60b2d3"
+    },
+    {
+      "path": "experiment.py",
+      "anonymous_http_status": 200,
+      "matches_local": true,
+      "sha256": "550cee098d31c4ee9a25cae2fcd390dc464af28f43f141a0b21570be8c92ea38"
+    },
+    {
+      "path": "README.md",
+      "anonymous_http_status": 200,
+      "matches_local": true,
+      "sha256": "2d7e47c55570a571ff23f330c10c3c21e0fa46c378b34bda3ead91d6e8fa9b19"
+    },
+    {
+      "path": "cases/cases.json",
+      "anonymous_http_status": 200,
+      "matches_local": true,
+      "sha256": "ffd336fa731f1230d829b5432e1412ab52a85131c2a5934d9ecbdd3b7bbc4cb8"
+    },
+    {
+      "path": "results/claude-pilot-20261109/experiment/summary.json",
+      "anonymous_http_status": 200,
+      "matches_local": true,
+      "sha256": "2ae57dac650f4b7df2f82408ed07eb3a8169d4ca3ba6acc3d058b169daf22e1c"
+    },
+    {
+      "path": "results/claude-pilot-20261109/experiment/runs/06-MC.json",
+      "anonymous_http_status": 200,
+      "matches_local": true,
+      "sha256": "8775fe7ca352273d816c28e2e4156cd429075f3a3dc787c925829c553d4c9328"
+    },
+    {
+      "path": "results/claude-pilot-20261109/experiment/request_ledgers/06-MC.jsonl",
+      "anonymous_http_status": 200,
+      "matches_local": true,
+      "sha256": "6a201f4da75c7c2e8f8823acaeb02e48d2f6d4a18b5a6054b0eaea037486b665"
+    },
+    {
+      "path": "conversations/研究实现与报告对话.md",
+      "anonymous_http_status": 200,
+      "matches_local": true,
+      "sha256": "5ea3a874c407823412d4084f4c6c3119e1df8be6adbd32bb3eef3024745202f7"
+    },
+    {
+      "path": "conversations/提问生成与协作流程对话.md",
+      "anonymous_http_status": 200,
+      "matches_local": true,
+      "sha256": "f49ee6858aa45ba640cc6f5b4f41ed503ff493be4a2672d419b9121fc127b85d"
+    },
+    {
+      "path": "conversations/attachments/pasted-01.md",
+      "anonymous_http_status": 200,
+      "matches_local": true,
+      "sha256": "21fd071e69426818a6f30f0a68fc5bf92ca9c921e620664549e823a3240c5540"
+    }
+  ]
+}
