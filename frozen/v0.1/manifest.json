@@ -1,0 +1,30 @@
+{
+  "experiment_version": "v0.1",
+  "frozen_on": "2026-11-09",
+  "historical_log_spec_version": "0.2",
+  "files": {
+    "experiment.py": "87f6517a2673fb6365ebf4e0d5650609a33117364170900d733232db7cde3b94",
+    "test_experiment.py": "bec282f9f8cc4b76708d38fbaba0974e797b636cf9b073ee699f41fb81cdf725",
+    "README.md": "d7b975a84cda2fed344f9c8d6da58585af05270bbae1b0da238aa96dc36e32cf"
+  },
+  "behavior_components": {
+    "TOOL_LIMIT": "81eab9a6a85f06281a37b59ddbdb97c4ec31ff987f3acf2a2e59b88be0044704",
+    "MODEL_LIMIT": "0fac6f11200af20bd87b62519c7057c21d290616f76b498c5200e381067c00bc",
+    "SOURCES": "1a8c4459d16029ac7d8fc06379d4dcd27f34035766ab70fa7701d400ae123f4e",
+    "CONTRACT": "11fe679a0acf35d9284d28d41d7c3283f85117b9372a4058a243df2ed2e7838e",
+    "query": "5bf114e1173be2beaf4cac926b5a65aa31bbccb61d9e9f8bed0c729ce9365e8a",
+    "resolve": "26c961b8337a7a93377ff116c4901934c4db330de498711f67c4a3526b7a403d",
+    "finish": "8c59e354605f58dd6572fe0b993844c695643ebed8106158ec7b93b507f33ea7",
+    "Case": "949c83dbbf7de6eb99006d4d223019c80f24d97898111d2c936410e4c1b797c2",
+    "cases": "77c44fb82fe7ea42feb36789a8c260b78a1a825fd945e50a6e3ce66f40a1c9ed",
+    "Simulator": "cd40d1787eada70556c8d93bfbe450af2e525e38a2c496e1ae174664b81c0f6b",
+    "append_history": "067aeaabceee31ccd3f8a40948a6b7efbae6faeb35c8014658fdf3a7be43e1ad",
+    "initialize": "17a27dfd9661b9421a357589262abebdf3f1f41347b85c642727bdfbfba77d6a",
+    "inspect_action": "b1a9137e87c04cc69a8b830e70a2477429f7bc60997453535a10ea337826a0a7",
+    "target_records": "4ca9aca166ddcec40b9d410889413ce6748ce1468727d3ade325bbfd56b991a3",
+    "evidence_outcome": "33ff27037d7b5d929cc090713c1582c99f84794b98331fc5236632f90ff99c2c",
+    "Rules": "a7188e230b608bc24acc4968b8f39c67110d29743ba2fe3ce9a3b7e1379850fe",
+    "parse_action": "5d45bd5d924eb3f95e2d8491facd54035a148b286564b0eda21e1b36053b16a8"
+  },
+  "note": "Existing outputs remain unchanged. Future fixes require a change log and affected results rerun."
+}

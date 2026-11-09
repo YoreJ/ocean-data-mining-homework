@@ -1,0 +1,7 @@
+{
+  "kind": "model_listing_diagnostic",
+  "inference_request": false,
+  "at_unix": 1794203045.558172,
+  "http_status": 200,
+  "raw_response": "{\"data\":[{\"id\":\"claude-haiku-4-5\",\"type\":\"model\",\"display_name\":\"claude-haiku-4-5\",\"created_at\":\"2024-01-01T00:00:00Z\"},{\"id\":\"claude-haiku-4-5-20251001\",\"type\":\"model\",\"display_name\":\"claude-haiku-4-5-20251001\",\"created_at\":\"2024-01-01T00:00:00Z\"},{\"id\":\"claude-opus-4-6\",\"type\":\"model\",\"display_name\":\"claude-opus-4-6\",\"created_at\":\"2024-01-01T00:00:00Z\"},{\"id\":\"claude-opus-4-7\",\"type\":\"model\",\"display_name\":\"claude-opus-4-7\",\"created_at\":\"2024-01-01T00:00:00Z\"},{\"id\":\"claude-opus-4-8\",\"type\":\"model\",\"display_name\":\"claude-opus-4-8\",\"created_at\":\"2024-01-01T00:00:00Z\"},{\"id\":\"claude-opus-5\",\"type\":\"model\",\"display_name\":\"claude-opus-5\",\"created_at\":\"2024-01-01T00:00:00Z\"},{\"id\":\"claude-opus-5-5\",\"type\":\"model\",\"display_name\":\"claude-opus-5-5\",\"created_at\":\"2024-01-01T00:00:00Z\"},{\"id\":\"claude-sonnet-4-6\",\"type\":\"model\",\"display_name\":\"claude-sonnet-4-6\",\"created_at\":\"2024-01-01T00:00:00Z\"},{\"id\":\"claude-sonnet-5\",\"type\":\"model\",\"display_name\":\"claude-sonnet-5\",\"created_at\":\"2024-01-01T00:00:00Z\"},{\"id\":\"claude-sonnet-5-5\",\"type\":\"model\",\"display_name\":\"claude-sonnet-5-5\",\"created_at\":\"2024-01-01T00:00:00Z\"}],\"object\":\"list\"}"
+}

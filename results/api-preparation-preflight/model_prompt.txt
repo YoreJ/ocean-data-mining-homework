@@ -1,0 +1,37 @@
+Query the temperature for the station, date, and variable in the supplied task.
+Return exactly one JSON action per response, without Markdown or additional text.
+
+Available actions and exact argument fields
+{"tool":"resolve_station","args":{"alias":"<task station>"}}
+{"tool":"query_temperature","args":{"source":"<source>","station_id":"<standard identifier>","date":"YYYY-MM-DD","variable":"temperature"}}
+{"tool":"finish","args":{"status":"<status>","answer":{}}}
+
+query_temperature accepts source P or B. Both sources are acceptable answers.
+finish accepts status answer, no_record, or incomplete. An answer must contain
+station, date, variable, source, temperature_c, and snapshot.
+
+The observation contains the task, tool contract, complete executed history,
+previous proposals and feedback, and remaining budgets.
+Both sources share standard station identifiers. resolve_station deterministically
+returns the standard identifier for the task alias and always succeeds.
+Identifier validation occurs before record lookup. INVALID_ID proves that the
+identifier is invalid throughout the shared namespace.
+NO_RECORD is returned only after parameter validation and proves absence for
+that source, station, date, variable, and snapshot. The snapshot is fixed and
+read-only. TIMEOUT proves neither presence nor absence; retry may succeed.
+
+Apply these two constraints when choosing an action.
+C1. Do not query an identifier already proven invalid in the shared namespace.
+C2. Do not repeat a query already proven absent for the same source, standard
+station, date, variable, and snapshot. Changed parameters or sources require
+their own evidence. A timeout alone does not justify excluding a retry.
+
+The recovery phase allows at most four executed tool calls and six model calls.
+The remaining budgets in the observation are measured before this response.
+This response consumes one model call. A rejected proposal or format error also
+consumes a model call; choosing again requires another call. Only executed tools
+consume tool budget. Each tool return is checked for valid target data or complete
+two-source absence evidence before budget exhaustion is checked. Completion is
+collected automatically when that evidence is present. Without sufficient
+evidence, report incomplete if you choose to stop. A no_record claim requires
+absence evidence from both sources. Select your next action using the observation.

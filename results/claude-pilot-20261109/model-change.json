@@ -1,0 +1,40 @@
+{
+  "from_model": "gpt-6.1-sol",
+  "to_requested_model": "claude-sonnet-4-6",
+  "default_model_found": false,
+  "selection_reason": "Listed Sonnet general-text model; middle-family choice for structured tool-action decisions. No optimization against pilot outcomes. Backend identity unverified.",
+  "listing_source": "results/real-pilot-20261109/connectivity/model-listing.json",
+  "frozen": {
+    "version": "v0.1",
+    "snapshots_intact": true,
+    "behavior_components_unchanged": true
+  },
+  "prompt_hash": "f3b52898e80e9e5a4625cff960d3167ba0d4bbfc70f6f5b3e7f4c6a1e74aedbe",
+  "configuration": {
+    "provider": "api.alsai.xyz (gateway, backend unverified)",
+    "base_url": "https://api.alsai.xyz/v1",
+    "protocol": "anthropic_messages",
+    "model": "claude-sonnet-4-6",
+    "credential_source": "claude_settings",
+    "api_key_env": "RECOVERY_API_KEY",
+    "auth_header": "bearer",
+    "anthropic_version": "2023-06-01",
+    "timeout_seconds": 60,
+    "generation": {
+      "temperature": 0,
+      "max_tokens": 512
+    },
+    "pricing": {
+      "currency": null,
+      "input_per_million": null,
+      "output_per_million": null,
+      "approved_total": null,
+      "amount_status": "unknown_authorized_by_user"
+    },
+    "ca_file": "/etc/ssl/cert.pem"
+  },
+  "returned_model_ids": [
+    "claude-sonnet-4-6"
+  ],
+  "official_reference": "https://platform.claude.com/docs/en/models/sonnet-4-6/overview"
+}

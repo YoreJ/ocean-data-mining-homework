@@ -1,0 +1,288 @@
+{
+  "source": "experiment.py:cases()",
+  "version": "v0.1",
+  "role": "Audit-only environment definitions; not visible to the model",
+  "cases": [
+    {
+      "case_id": "01",
+      "description": "identifier repair",
+      "prefix": [
+        {
+          "tool": "query_temperature",
+          "args": {
+            "source": "P",
+            "station_id": "OLD7",
+            "date": "2026-01-15",
+            "variable": "temperature"
+          }
+        }
+      ],
+      "schedules": {
+        "P": [
+          "SUCCESS"
+        ],
+        "B": [
+          "SUCCESS"
+        ]
+      },
+      "expected": "success",
+      "task": {
+        "station": "Station-A",
+        "date": "2026-01-15",
+        "variable": "temperature",
+        "snapshot": "snapshot-1"
+      }
+    },
+    {
+      "case_id": "02",
+      "description": "primary missing",
+      "prefix": [
+        {
+          "tool": "resolve_station",
+          "args": {
+            "alias": "Station-A"
+          }
+        },
+        {
+          "tool": "query_temperature",
+          "args": {
+            "source": "P",
+            "station_id": "S17",
+            "date": "2026-01-15",
+            "variable": "temperature"
+          }
+        }
+      ],
+      "schedules": {
+        "P": [
+          "NO_RECORD"
+        ],
+        "B": [
+          "SUCCESS"
+        ]
+      },
+      "expected": "success",
+      "task": {
+        "station": "Station-A",
+        "date": "2026-01-15",
+        "variable": "temperature",
+        "snapshot": "snapshot-1"
+      }
+    },
+    {
+      "case_id": "03",
+      "description": "one timeout",
+      "prefix": [
+        {
+          "tool": "resolve_station",
+          "args": {
+            "alias": "Station-A"
+          }
+        },
+        {
+          "tool": "query_temperature",
+          "args": {
+            "source": "P",
+            "station_id": "S17",
+            "date": "2026-01-15",
+            "variable": "temperature"
+          }
+        }
+      ],
+      "schedules": {
+        "P": [
+          "TIMEOUT",
+          "SUCCESS"
+        ],
+        "B": [
+          "SUCCESS"
+        ]
+      },
+      "expected": "success",
+      "task": {
+        "station": "Station-A",
+        "date": "2026-01-15",
+        "variable": "temperature",
+        "snapshot": "snapshot-1"
+      }
+    },
+    {
+      "case_id": "04",
+      "description": "repair, missing, backup timeout",
+      "prefix": [
+        {
+          "tool": "query_temperature",
+          "args": {
+            "source": "P",
+            "station_id": "OLD7",
+            "date": "2026-01-15",
+            "variable": "temperature"
+          }
+        }
+      ],
+      "schedules": {
+        "P": [
+          "NO_RECORD"
+        ],
+        "B": [
+          "TIMEOUT",
+          "SUCCESS"
+        ]
+      },
+      "expected": "success",
+      "task": {
+        "station": "Station-A",
+        "date": "2026-01-15",
+        "variable": "temperature",
+        "snapshot": "snapshot-1"
+      }
+    },
+    {
+      "case_id": "05",
+      "description": "two primary timeouts",
+      "prefix": [
+        {
+          "tool": "resolve_station",
+          "args": {
+            "alias": "Station-A"
+          }
+        },
+        {
+          "tool": "query_temperature",
+          "args": {
+            "source": "P",
+            "station_id": "S17",
+            "date": "2026-01-15",
+            "variable": "temperature"
+          }
+        }
+      ],
+      "schedules": {
+        "P": [
+          "TIMEOUT",
+          "TIMEOUT",
+          "SUCCESS"
+        ],
+        "B": [
+          "SUCCESS"
+        ]
+      },
+      "expected": "success",
+      "task": {
+        "station": "Station-A",
+        "date": "2026-01-15",
+        "variable": "temperature",
+        "snapshot": "snapshot-1"
+      }
+    },
+    {
+      "case_id": "06",
+      "description": "missing then backup timeout",
+      "prefix": [
+        {
+          "tool": "resolve_station",
+          "args": {
+            "alias": "Station-A"
+          }
+        },
+        {
+          "tool": "query_temperature",
+          "args": {
+            "source": "P",
+            "station_id": "S17",
+            "date": "2026-01-15",
+            "variable": "temperature"
+          }
+        }
+      ],
+      "schedules": {
+        "P": [
+          "NO_RECORD"
+        ],
+        "B": [
+          "TIMEOUT",
+          "SUCCESS"
+        ]
+      },
+      "expected": "success",
+      "task": {
+        "station": "Station-A",
+        "date": "2026-01-15",
+        "variable": "temperature",
+        "snapshot": "snapshot-1"
+      }
+    },
+    {
+      "case_id": "07",
+      "description": "both sources missing",
+      "prefix": [
+        {
+          "tool": "resolve_station",
+          "args": {
+            "alias": "Station-A"
+          }
+        },
+        {
+          "tool": "query_temperature",
+          "args": {
+            "source": "P",
+            "station_id": "S17",
+            "date": "2026-01-15",
+            "variable": "temperature"
+          }
+        }
+      ],
+      "schedules": {
+        "P": [
+          "NO_RECORD"
+        ],
+        "B": [
+          "NO_RECORD"
+        ]
+      },
+      "expected": "correct_no_record",
+      "task": {
+        "station": "Station-A",
+        "date": "2026-01-15",
+        "variable": "temperature",
+        "snapshot": "snapshot-1"
+      }
+    },
+    {
+      "case_id": "08",
+      "description": "persistent timeout and missing backup",
+      "prefix": [
+        {
+          "tool": "resolve_station",
+          "args": {
+            "alias": "Station-A"
+          }
+        },
+        {
+          "tool": "query_temperature",
+          "args": {
+            "source": "P",
+            "station_id": "S17",
+            "date": "2026-01-15",
+            "variable": "temperature"
+          }
+        }
+      ],
+      "schedules": {
+        "P": [
+          "TIMEOUT"
+        ],
+        "B": [
+          "NO_RECORD"
+        ]
+      },
+      "expected": "incomplete",
+      "task": {
+        "station": "Station-A",
+        "date": "2026-01-15",
+        "variable": "temperature",
+        "snapshot": "snapshot-1"
+      }
+    }
+  ]
+}

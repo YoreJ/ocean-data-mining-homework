@@ -1,0 +1,18 @@
+{
+  "provider": "",
+  "base_url": "",
+  "protocol": "chat_completions",
+  "model": "",
+  "api_key_env": "RECOVERY_API_KEY",
+  "timeout_seconds": 60,
+  "generation": {
+    "temperature": 0,
+    "max_completion_tokens": 512
+  },
+  "pricing": {
+    "currency": null,
+    "input_per_million": null,
+    "output_per_million": null,
+    "approved_total": null
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "host": "api.alsai.xyz",
+  "proxy_environment_presence": {
+    "HTTPS_PROXY": false,
+    "HTTP_PROXY": false,
+    "ALL_PROXY": false,
+    "SSL_CERT_FILE": false,
+    "SSL_CERT_DIR": false
+  },
+  "dns_addresses": [
+    "198.18.0.64"
+  ],
+  "error_class": "SSLCertVerificationError",
+  "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)",
+  "ca_file_exists": false
+}

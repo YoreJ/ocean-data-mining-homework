@@ -1,0 +1,2148 @@
+{
+  "kind": "offline_result_audit",
+  "new_model_requests": 0,
+  "source_manifest_sha256": "03c10ea51a4718296e36987de3a9298310bac9a7a69d984bcd97733dd98374d1",
+  "groups": {
+    "R": {
+      "data_source": "results/api-preparation-program-check/rule_baseline",
+      "cases": [
+        {
+          "case_id": "01",
+          "outcome": "success",
+          "tool_calls": 2,
+          "model_calls": 0,
+          "tokens": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 0.10879198089241982,
+          "fee": null
+        },
+        {
+          "case_id": "02",
+          "outcome": "success",
+          "tool_calls": 1,
+          "model_calls": 0,
+          "tokens": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 0.04125002305954695,
+          "fee": null
+        },
+        {
+          "case_id": "03",
+          "outcome": "success",
+          "tool_calls": 1,
+          "model_calls": 0,
+          "tokens": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 0.03791600465774536,
+          "fee": null
+        },
+        {
+          "case_id": "04",
+          "outcome": "success",
+          "tool_calls": 4,
+          "model_calls": 0,
+          "tokens": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 0.12883299496024847,
+          "fee": null
+        },
+        {
+          "case_id": "05",
+          "outcome": "success",
+          "tool_calls": 2,
+          "model_calls": 0,
+          "tokens": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 0.07345795165747404,
+          "fee": null
+        },
+        {
+          "case_id": "06",
+          "outcome": "success",
+          "tool_calls": 2,
+          "model_calls": 0,
+          "tokens": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 0.0712500186637044,
+          "fee": null
+        },
+        {
+          "case_id": "07",
+          "outcome": "correct_no_record",
+          "tool_calls": 1,
+          "model_calls": 0,
+          "tokens": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 0.05066697485744953,
+          "fee": null
+        },
+        {
+          "case_id": "08",
+          "outcome": "incomplete",
+          "tool_calls": 4,
+          "model_calls": 0,
+          "tokens": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 0.17312495037913322,
+          "fee": null
+        }
+      ],
+      "outcomes": {
+        "correct_no_record": 1,
+        "incomplete": 1,
+        "success": 6
+      },
+      "tool_calls": 17,
+      "model_calls": 0,
+      "proposal_action_counts": {
+        "resolve_station": 2,
+        "query_temperature": 15
+      },
+      "query_proposals": 15,
+      "interceptable_query_proposals": 0,
+      "checker_dispatch_calls": null,
+      "query_scope_checks": null,
+      "recovery_elapsed_ms": 0.6852908991277218,
+      "model_adapter_elapsed_ms": 0.0,
+      "tool_elapsed_ms": 0.04208285827189684,
+      "checker_elapsed_ms": null,
+      "rule_decision_elapsed_ms": null,
+      "checker_measurements_ms": [],
+      "raw_usage_totals": {
+        "input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 0
+      },
+      "reported_input_total": 0,
+      "mean_reported_input_per_request": null,
+      "visible_text_chars_range": null,
+      "total_visible_text_chars": 0,
+      "repeated_action_occurrences_in_decisions": 0,
+      "fee": null
+    },
+    "M": {
+      "data_source": "results/claude-pilot-20261109/experiment/runs",
+      "cases": [
+        {
+          "case_id": "01",
+          "outcome": "success",
+          "tool_calls": 2,
+          "model_calls": 2,
+          "tokens": {
+            "input_tokens": 8276,
+            "output_tokens": 86,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 5343.617416918278,
+          "fee": null
+        },
+        {
+          "case_id": "02",
+          "outcome": "success",
+          "tool_calls": 1,
+          "model_calls": 1,
+          "tokens": {
+            "input_tokens": 4386,
+            "output_tokens": 58,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 3035.1720000617206,
+          "fee": null
+        },
+        {
+          "case_id": "03",
+          "outcome": "success",
+          "tool_calls": 1,
+          "model_calls": 1,
+          "tokens": {
+            "input_tokens": 4379,
+            "output_tokens": 58,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 2923.4566669911146,
+          "fee": null
+        },
+        {
+          "case_id": "04",
+          "outcome": "success",
+          "tool_calls": 4,
+          "model_calls": 4,
+          "tokens": {
+            "input_tokens": 20561,
+            "output_tokens": 202,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 10793.100083013996,
+          "fee": null
+        },
+        {
+          "case_id": "05",
+          "outcome": "success",
+          "tool_calls": 2,
+          "model_calls": 2,
+          "tokens": {
+            "input_tokens": 9693,
+            "output_tokens": 116,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 5216.9091671239585,
+          "fee": null
+        },
+        {
+          "case_id": "06",
+          "outcome": "success",
+          "tool_calls": 2,
+          "model_calls": 2,
+          "tokens": {
+            "input_tokens": 9703,
+            "output_tokens": 116,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 6940.233082976192,
+          "fee": null
+        },
+        {
+          "case_id": "07",
+          "outcome": "correct_no_record",
+          "tool_calls": 1,
+          "model_calls": 1,
+          "tokens": {
+            "input_tokens": 4385,
+            "output_tokens": 58,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 2773.651957977563,
+          "fee": null
+        },
+        {
+          "case_id": "08",
+          "outcome": "incomplete",
+          "tool_calls": 3,
+          "model_calls": 4,
+          "tokens": {
+            "input_tokens": 24483,
+            "output_tokens": 204,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 10079.972625011578,
+          "fee": null
+        }
+      ],
+      "outcomes": {
+        "correct_no_record": 1,
+        "incomplete": 1,
+        "success": 6
+      },
+      "tool_calls": 16,
+      "model_calls": 17,
+      "proposal_action_counts": {
+        "resolve_station": 2,
+        "query_temperature": 14,
+        "finish": 1
+      },
+      "query_proposals": 14,
+      "interceptable_query_proposals": 0,
+      "checker_dispatch_calls": null,
+      "query_scope_checks": null,
+      "recovery_elapsed_ms": 47106.1130000744,
+      "model_adapter_elapsed_ms": 47089.260917622596,
+      "tool_elapsed_ms": 0.4361276514828205,
+      "checker_elapsed_ms": null,
+      "rule_decision_elapsed_ms": null,
+      "checker_measurements_ms": [],
+      "raw_usage_totals": {
+        "input_tokens": 102,
+        "cache_creation_input_tokens": 21897,
+        "cache_read_input_tokens": 63867,
+        "output_tokens": 898
+      },
+      "reported_input_total": 85866,
+      "mean_reported_input_per_request": 5050.941176470588,
+      "visible_text_chars_range": [
+        3312,
+        5092
+      ],
+      "total_visible_text_chars": 66094,
+      "repeated_action_occurrences_in_decisions": 15,
+      "fee": null,
+      "summary_token_sum_matches": true
+    },
+    "MC": {
+      "data_source": "results/claude-pilot-20261109/experiment/runs",
+      "cases": [
+        {
+          "case_id": "01",
+          "outcome": "success",
+          "tool_calls": 2,
+          "model_calls": 2,
+          "tokens": {
+            "input_tokens": 8277,
+            "output_tokens": 86,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 5484.646958066151,
+          "fee": null
+        },
+        {
+          "case_id": "02",
+          "outcome": "success",
+          "tool_calls": 1,
+          "model_calls": 1,
+          "tokens": {
+            "input_tokens": 4386,
+            "output_tokens": 58,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 3029.970832867548,
+          "fee": null
+        },
+        {
+          "case_id": "03",
+          "outcome": "success",
+          "tool_calls": 1,
+          "model_calls": 1,
+          "tokens": {
+            "input_tokens": 4379,
+            "output_tokens": 58,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 2741.8068749830127,
+          "fee": null
+        },
+        {
+          "case_id": "04",
+          "outcome": "success",
+          "tool_calls": 4,
+          "model_calls": 4,
+          "tokens": {
+            "input_tokens": 20563,
+            "output_tokens": 202,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 11093.958209035918,
+          "fee": null
+        },
+        {
+          "case_id": "05",
+          "outcome": "success",
+          "tool_calls": 2,
+          "model_calls": 2,
+          "tokens": {
+            "input_tokens": 9693,
+            "output_tokens": 116,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 4732.45987505652,
+          "fee": null
+        },
+        {
+          "case_id": "06",
+          "outcome": "success",
+          "tool_calls": 2,
+          "model_calls": 2,
+          "tokens": {
+            "input_tokens": 9702,
+            "output_tokens": 116,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 4816.4341249503195,
+          "fee": null
+        },
+        {
+          "case_id": "07",
+          "outcome": "correct_no_record",
+          "tool_calls": 1,
+          "model_calls": 1,
+          "tokens": {
+            "input_tokens": 4385,
+            "output_tokens": 58,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 2471.9320840667933,
+          "fee": null
+        },
+        {
+          "case_id": "08",
+          "outcome": "incomplete",
+          "tool_calls": 3,
+          "model_calls": 4,
+          "tokens": {
+            "input_tokens": 24492,
+            "output_tokens": 204,
+            "other_tokens": 0
+          },
+          "elapsed_ms": 10431.247791973874,
+          "fee": null
+        }
+      ],
+      "outcomes": {
+        "correct_no_record": 1,
+        "incomplete": 1,
+        "success": 6
+      },
+      "tool_calls": 16,
+      "model_calls": 17,
+      "proposal_action_counts": {
+        "resolve_station": 2,
+        "query_temperature": 14,
+        "finish": 1
+      },
+      "query_proposals": 14,
+      "interceptable_query_proposals": 0,
+      "checker_dispatch_calls": 17,
+      "query_scope_checks": 14,
+      "recovery_elapsed_ms": 44802.456751000136,
+      "model_adapter_elapsed_ms": 44796.81620746851,
+      "tool_elapsed_ms": 0.37783337756991386,
+      "checker_elapsed_ms": 0.2010422758758068,
+      "rule_decision_elapsed_ms": null,
+      "checker_measurements_ms": [
+        0.010041985660791397,
+        0.014083925634622574,
+        0.018625054508447647,
+        0.01100008375942707,
+        0.006875023245811462,
+        0.013750046491622925,
+        0.016250181943178177,
+        0.010417075827717781,
+        0.01062522642314434,
+        0.010624993592500687,
+        0.011290889233350754,
+        0.016832957044243813,
+        0.007333001121878624,
+        0.011249911040067673,
+        0.008249888196587563,
+        0.01933402381837368,
+        0.004458008334040642
+      ],
+      "raw_usage_totals": {
+        "input_tokens": 102,
+        "cache_creation_input_tokens": 21858,
+        "cache_read_input_tokens": 63917,
+        "output_tokens": 898
+      },
+      "reported_input_total": 85877,
+      "mean_reported_input_per_request": 5051.588235294118,
+      "visible_text_chars_range": [
+        3312,
+        5092
+      ],
+      "total_visible_text_chars": 66094,
+      "repeated_action_occurrences_in_decisions": 15,
+      "fee": null,
+      "summary_token_sum_matches": true
+    }
+  },
+  "requests": [
+    {
+      "run_id": "01-M",
+      "group": "M",
+      "step": 1,
+      "client_request_id": "028251b7-c8df-42ba-8e4d-a0b275148905",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 898,
+      "visible_text_chars": 3312,
+      "history_count": 1,
+      "decision_count": 0,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 0,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 2,
+        "history": 240,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 984
+        },
+        "cache_creation_input_tokens": 984,
+        "cache_read_input_tokens": 2865,
+        "input_tokens": 6,
+        "output_tokens": 28
+      },
+      "input_total": 3855,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "01-M",
+      "group": "M",
+      "step": 2,
+      "client_request_id": "7487b24b-3f3e-4702-8b19-2cb43e78ce5c",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1199,
+      "visible_text_chars": 3613,
+      "history_count": 2,
+      "decision_count": 1,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 1,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 109,
+        "history": 434,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1128,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 1128,
+        "cache_read_input_tokens": 3287,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 4421,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "01-MC",
+      "group": "MC",
+      "step": 1,
+      "client_request_id": "6bda5669-3462-4170-85c5-44d569ca686a",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 898,
+      "visible_text_chars": 3312,
+      "history_count": 1,
+      "decision_count": 0,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 0,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 2,
+        "history": 240,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 981
+        },
+        "cache_creation_input_tokens": 981,
+        "cache_read_input_tokens": 2869,
+        "input_tokens": 6,
+        "output_tokens": 28
+      },
+      "input_total": 3856,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "01-MC",
+      "group": "MC",
+      "step": 2,
+      "client_request_id": "7210d268-478b-4805-a067-98da0ed40fd1",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1199,
+      "visible_text_chars": 3613,
+      "history_count": 2,
+      "decision_count": 1,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 1,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 109,
+        "history": 434,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1128
+        },
+        "cache_creation_input_tokens": 1128,
+        "cache_read_input_tokens": 3287,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 4421,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "02-M",
+      "group": "M",
+      "step": 1,
+      "client_request_id": "89687a07-3769-4250-87f6-d67d0c59ece1",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1180,
+      "visible_text_chars": 3594,
+      "history_count": 2,
+      "decision_count": 0,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 0,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 2,
+        "history": 522,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1116
+        },
+        "cache_creation_input_tokens": 1116,
+        "cache_read_input_tokens": 3264,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 4386,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "02-MC",
+      "group": "MC",
+      "step": 1,
+      "client_request_id": "f0e15401-9530-4d1e-92cf-6e2c50cbb1ff",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1180,
+      "visible_text_chars": 3594,
+      "history_count": 2,
+      "decision_count": 0,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 0,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 2,
+        "history": 522,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1116
+        },
+        "cache_creation_input_tokens": 1116,
+        "cache_read_input_tokens": 3264,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 4386,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "03-M",
+      "group": "M",
+      "step": 1,
+      "client_request_id": "dee7c3cf-6cef-4c27-b2fe-2e1cb9478b46",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1178,
+      "visible_text_chars": 3592,
+      "history_count": 2,
+      "decision_count": 0,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 0,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 2,
+        "history": 520,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1116
+        },
+        "cache_creation_input_tokens": 1116,
+        "cache_read_input_tokens": 3257,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 4379,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "03-MC",
+      "group": "MC",
+      "step": 1,
+      "client_request_id": "b535042a-8b3f-4439-841a-57e14db614b1",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1178,
+      "visible_text_chars": 3592,
+      "history_count": 2,
+      "decision_count": 0,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 0,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 2,
+        "history": 520,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1116
+        },
+        "cache_creation_input_tokens": 1116,
+        "cache_read_input_tokens": 3257,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 4379,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "04-M",
+      "group": "M",
+      "step": 1,
+      "client_request_id": "fd5b64b9-4561-415a-a283-5d0ebf05ced0",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 898,
+      "visible_text_chars": 3312,
+      "history_count": 1,
+      "decision_count": 0,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 0,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 2,
+        "history": 240,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 981
+        },
+        "cache_creation_input_tokens": 981,
+        "cache_read_input_tokens": 2869,
+        "input_tokens": 6,
+        "output_tokens": 28
+      },
+      "input_total": 3856,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "04-M",
+      "group": "M",
+      "step": 2,
+      "client_request_id": "b315a12f-cfa7-4457-910e-643b3fea850c",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1199,
+      "visible_text_chars": 3613,
+      "history_count": 2,
+      "decision_count": 1,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 1,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 109,
+        "history": 434,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1128
+        },
+        "cache_creation_input_tokens": 1128,
+        "cache_read_input_tokens": 3287,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 4421,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "04-M",
+      "group": "M",
+      "step": 3,
+      "client_request_id": "fdf5a85e-00b6-4c66-a365-4b157a89cb13",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1701,
+      "visible_text_chars": 4115,
+      "history_count": 3,
+      "decision_count": 2,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 2,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 283,
+        "history": 762,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1371
+        },
+        "cache_creation_input_tokens": 1371,
+        "cache_read_input_tokens": 3982,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 5359,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "04-M",
+      "group": "M",
+      "step": 4,
+      "client_request_id": "ab11d75e-792f-4e1d-a3fc-74b52e5804b8",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 2201,
+      "visible_text_chars": 4615,
+      "history_count": 4,
+      "decision_count": 3,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 3,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 457,
+        "history": 1088,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1770,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 1770,
+        "cache_read_input_tokens": 5149,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 6925,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "04-MC",
+      "group": "MC",
+      "step": 1,
+      "client_request_id": "1e0b2525-bbf5-4cc8-8ec9-8a6b2700e531",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 898,
+      "visible_text_chars": 3312,
+      "history_count": 1,
+      "decision_count": 0,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 0,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 2,
+        "history": 240,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 984
+        },
+        "cache_creation_input_tokens": 984,
+        "cache_read_input_tokens": 2865,
+        "input_tokens": 6,
+        "output_tokens": 28
+      },
+      "input_total": 3855,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "04-MC",
+      "group": "MC",
+      "step": 2,
+      "client_request_id": "7fa8815e-543c-445a-b8c9-d317ac057450",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1199,
+      "visible_text_chars": 3613,
+      "history_count": 2,
+      "decision_count": 1,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 1,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 109,
+        "history": 434,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1125
+        },
+        "cache_creation_input_tokens": 1125,
+        "cache_read_input_tokens": 3291,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 4422,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "04-MC",
+      "group": "MC",
+      "step": 3,
+      "client_request_id": "da5a0b2f-8992-4da2-805f-146f163bba26",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1701,
+      "visible_text_chars": 4115,
+      "history_count": 3,
+      "decision_count": 2,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 2,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 283,
+        "history": 762,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1365
+        },
+        "cache_creation_input_tokens": 1365,
+        "cache_read_input_tokens": 3990,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 5361,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "04-MC",
+      "group": "MC",
+      "step": 4,
+      "client_request_id": "10a444aa-3214-44f3-aac3-de153ab2455a",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 2201,
+      "visible_text_chars": 4615,
+      "history_count": 4,
+      "decision_count": 3,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 3,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 457,
+        "history": 1088,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1770,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 1770,
+        "cache_read_input_tokens": 5149,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 6925,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "05-M",
+      "group": "M",
+      "step": 1,
+      "client_request_id": "306c2ef2-095d-4fad-84ae-dd5eb3bee832",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1178,
+      "visible_text_chars": 3592,
+      "history_count": 2,
+      "decision_count": 0,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 0,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 2,
+        "history": 520,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1116
+        },
+        "cache_creation_input_tokens": 1116,
+        "cache_read_input_tokens": 3257,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 4379,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "05-M",
+      "group": "M",
+      "step": 2,
+      "client_request_id": "5c436fd5-aed7-417b-a552-0eee7c4efdf8",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1676,
+      "visible_text_chars": 4090,
+      "history_count": 3,
+      "decision_count": 1,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 1,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 174,
+        "history": 846,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1356
+        },
+        "cache_creation_input_tokens": 1356,
+        "cache_read_input_tokens": 3952,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 5314,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "05-MC",
+      "group": "MC",
+      "step": 1,
+      "client_request_id": "5de4b534-f275-45cd-89bc-3f09c4dc9174",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1178,
+      "visible_text_chars": 3592,
+      "history_count": 2,
+      "decision_count": 0,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 0,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 2,
+        "history": 520,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1116,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 1116,
+        "cache_read_input_tokens": 3257,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 4379,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "05-MC",
+      "group": "MC",
+      "step": 2,
+      "client_request_id": "1e3e4374-5d24-4055-9639-ed968624157c",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1676,
+      "visible_text_chars": 4090,
+      "history_count": 3,
+      "decision_count": 1,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 1,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 174,
+        "history": 846,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1356,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 1356,
+        "cache_read_input_tokens": 3952,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 5314,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "06-M",
+      "group": "M",
+      "step": 1,
+      "client_request_id": "91f81089-1ccc-46d3-aa04-bff848ff9c78",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1180,
+      "visible_text_chars": 3594,
+      "history_count": 2,
+      "decision_count": 0,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 0,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 2,
+        "history": 522,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1116,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 1116,
+        "cache_read_input_tokens": 3264,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 4386,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "06-M",
+      "group": "M",
+      "step": 2,
+      "client_request_id": "548aad05-205d-480f-a671-f102b4bc1b2e",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1678,
+      "visible_text_chars": 4092,
+      "history_count": 3,
+      "decision_count": 1,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 1,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 174,
+        "history": 848,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1359,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 1359,
+        "cache_read_input_tokens": 3952,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 5317,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "06-MC",
+      "group": "MC",
+      "step": 1,
+      "client_request_id": "2de186b0-9680-494d-8bc2-ac03362dc345",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1180,
+      "visible_text_chars": 3594,
+      "history_count": 2,
+      "decision_count": 0,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 0,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 2,
+        "history": 522,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1119
+        },
+        "cache_creation_input_tokens": 1119,
+        "cache_read_input_tokens": 3260,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 4385,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "06-MC",
+      "group": "MC",
+      "step": 2,
+      "client_request_id": "1bff8817-3056-4af6-b048-40f804920e57",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1678,
+      "visible_text_chars": 4092,
+      "history_count": 3,
+      "decision_count": 1,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 1,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 174,
+        "history": 848,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1359,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 1359,
+        "cache_read_input_tokens": 3952,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 5317,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "07-M",
+      "group": "M",
+      "step": 1,
+      "client_request_id": "b524790e-7342-4684-beb5-8baf1d27202e",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1180,
+      "visible_text_chars": 3594,
+      "history_count": 2,
+      "decision_count": 0,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 0,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 2,
+        "history": 522,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1119
+        },
+        "cache_creation_input_tokens": 1119,
+        "cache_read_input_tokens": 3260,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 4385,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "07-MC",
+      "group": "MC",
+      "step": 1,
+      "client_request_id": "57d152b4-0ff0-46bb-acd3-161c1bd4d133",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1180,
+      "visible_text_chars": 3594,
+      "history_count": 2,
+      "decision_count": 0,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 0,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 2,
+        "history": 522,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1119
+        },
+        "cache_creation_input_tokens": 1119,
+        "cache_read_input_tokens": 3260,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 4385,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "08-M",
+      "group": "M",
+      "step": 1,
+      "client_request_id": "91916b57-eb05-4fea-a8d0-f7b263cfa027",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1178,
+      "visible_text_chars": 3592,
+      "history_count": 2,
+      "decision_count": 0,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 0,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 2,
+        "history": 520,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1116
+        },
+        "cache_creation_input_tokens": 1116,
+        "cache_read_input_tokens": 3257,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 4379,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "08-M",
+      "group": "M",
+      "step": 2,
+      "client_request_id": "2f250b68-e8c0-42ed-ac38-70baebe65232",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1676,
+      "visible_text_chars": 4090,
+      "history_count": 3,
+      "decision_count": 1,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 1,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 174,
+        "history": 846,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1356
+        },
+        "cache_creation_input_tokens": 1356,
+        "cache_read_input_tokens": 3952,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 5314,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "08-M",
+      "group": "M",
+      "step": 3,
+      "client_request_id": "008a2bdc-5c00-4d5f-a7af-6a047f9ad09b",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 2178,
+      "visible_text_chars": 4592,
+      "history_count": 4,
+      "decision_count": 2,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 2,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 348,
+        "history": 1174,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1755
+        },
+        "cache_creation_input_tokens": 1755,
+        "cache_read_input_tokens": 5119,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 6880,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "08-M",
+      "group": "M",
+      "step": 4,
+      "client_request_id": "ccb532ec-a27e-4728-8274-1ef3ad32a873",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 2678,
+      "visible_text_chars": 5092,
+      "history_count": 5,
+      "decision_count": 3,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 3,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 522,
+        "history": 1500,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 2010,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 2010,
+        "cache_read_input_tokens": 5894,
+        "input_tokens": 6,
+        "output_tokens": 30
+      },
+      "input_total": 7910,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "08-MC",
+      "group": "MC",
+      "step": 1,
+      "client_request_id": "c0d438d3-08de-4cf3-935a-be6508022d46",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1178,
+      "visible_text_chars": 3592,
+      "history_count": 2,
+      "decision_count": 0,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 0,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 2,
+        "history": 520,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1116
+        },
+        "cache_creation_input_tokens": 1116,
+        "cache_read_input_tokens": 3257,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 4379,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "08-MC",
+      "group": "MC",
+      "step": 2,
+      "client_request_id": "4600787e-3880-401a-a878-02f18269f21a",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 1676,
+      "visible_text_chars": 4090,
+      "history_count": 3,
+      "decision_count": 1,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 1,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 174,
+        "history": 846,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1356
+        },
+        "cache_creation_input_tokens": 1356,
+        "cache_read_input_tokens": 3952,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 5314,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "08-MC",
+      "group": "MC",
+      "step": 3,
+      "client_request_id": "c3204109-c97e-404a-8f56-5037a9a368d0",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 2178,
+      "visible_text_chars": 4592,
+      "history_count": 4,
+      "decision_count": 2,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 2,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 348,
+        "history": 1174,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1755
+        },
+        "cache_creation_input_tokens": 1755,
+        "cache_read_input_tokens": 5119,
+        "input_tokens": 6,
+        "output_tokens": 58
+      },
+      "input_total": 6880,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    },
+    {
+      "run_id": "08-MC",
+      "group": "MC",
+      "step": 4,
+      "client_request_id": "9ff0be66-93c5-4978-bf69-ff7124c132db",
+      "payload_keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream",
+        "system",
+        "temperature"
+      ],
+      "message_count": 1,
+      "system_chars": 2414,
+      "user_chars": 2678,
+      "visible_text_chars": 5092,
+      "history_count": 5,
+      "decision_count": 3,
+      "duplicate_history_record_ids": false,
+      "executed_actions_repeated_in_decisions": 3,
+      "contract_json_chars": 467,
+      "observation_field_chars": {
+        "budgets": 25,
+        "contract": 467,
+        "decisions": 522,
+        "history": 1500,
+        "task": 99
+      },
+      "forbidden_field_names": [],
+      "native_tools_supplied": false,
+      "cache_control_supplied": false,
+      "raw_usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1977,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 1977,
+        "cache_read_input_tokens": 5936,
+        "input_tokens": 6,
+        "output_tokens": 30
+      },
+      "input_total": 7919,
+      "nested_cache_creation_matches_parent": true,
+      "event_usage_matches_recomputed": true,
+      "usage_matches_raw_http": true
+    }
+  ],
+  "case08": {
+    "R": {
+      "outcome": "incomplete",
+      "termination": "tool_budget_exhausted",
+      "last_action": {
+        "tool": "query_temperature",
+        "args": {
+          "source": "P",
+          "station_id": "S17",
+          "date": "2026-01-15",
+          "variable": "temperature"
+        }
+      },
+      "budgets_before_last_action": {
+        "tools": 1,
+        "models": null
+      },
+      "budgets_after_last_action": {
+        "tools": 0,
+        "models": null
+      },
+      "optimal_stopping_supported": false
+    },
+    "M": {
+      "outcome": "incomplete",
+      "termination": "active_finish",
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "status": "incomplete",
+          "answer": {}
+        }
+      },
+      "budgets_before_last_action": {
+        "tools": 1,
+        "models": 3
+      },
+      "budgets_after_last_action": {
+        "tools": 1,
+        "models": 2
+      },
+      "optimal_stopping_supported": false
+    },
+    "MC": {
+      "outcome": "incomplete",
+      "termination": "active_finish",
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "status": "incomplete",
+          "answer": {}
+        }
+      },
+      "budgets_before_last_action": {
+        "tools": 1,
+        "models": 3
+      },
+      "budgets_after_last_action": {
+        "tools": 1,
+        "models": 2
+      },
+      "optimal_stopping_supported": false
+    }
+  },
+  "checks": {
+    "request_count": 34,
+    "unique_client_request_ids": true,
+    "saved_summary_input_totals_match": true,
+    "rule_checkpoints_match_model_checkpoints": true,
+    "raw_http_usage_matches_all_ledger_usage": true,
+    "nested_cache_creation_matches_all_parent_fields": true,
+    "all_normalized_event_usage_matches": true,
+    "any_repeated_history_ids": false,
+    "any_forbidden_fields": false,
+    "cache_control_sent_count": 0,
+    "unique_ordinary_input_counts": [
+      6
+    ],
+    "nonzero_cache_read_and_write_count": 34
+  },
+  "limitations": [
+    "Usage is gateway-reported; upstream prompt, tokenizer and cache implementation unverified.",
+    "R timing is from a separate earlier local run; not a paired timing benchmark.",
+    "Checker timing covers inspect_action wrapper only, excluding wider logging/feedback overhead.",
+    "No triggered intervention means reselection effects have no observed sample."
+  ],
+  "source_experiment_status": "COMPLETED"
+}

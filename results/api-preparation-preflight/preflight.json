@@ -1,0 +1,195 @@
+{
+  "status": "BLOCKED",
+  "issues": [
+    "Missing model",
+    "Pricing and total cost condition have not been agreed"
+  ],
+  "remote_validation": "NOT_PERFORMED",
+  "model_requests_sent": 0,
+  "max_model_requests": 96,
+  "usage_capability": "API usage parser prepared; actual provider reporting unverified",
+  "frozen": {
+    "version": "v0.1",
+    "snapshots_intact": true,
+    "behavior_components_unchanged": true
+  },
+  "prompt_hash": "f3b52898e80e9e5a4625cff960d3167ba0d4bbfc70f6f5b3e7f4c6a1e74aedbe",
+  "provider": "api.alsai.xyz (gateway, backend unverified)",
+  "model": "",
+  "protocol": "anthropic_messages",
+  "generation": {
+    "temperature": 0,
+    "max_tokens": 512
+  },
+  "timeout_seconds": 60,
+  "pricing": {
+    "currency": null,
+    "input_per_million": null,
+    "output_per_million": null,
+    "approved_total": null
+  },
+  "automatic_retries": 0,
+  "plan": [
+    {
+      "planned_order": 1,
+      "case_id": "01",
+      "group": "M",
+      "run_id": "01-M",
+      "checkpoint_hash": "b29f7da1d3cac564051cde85c812ac9a9187f32b552a8038a4b107b1bee03329",
+      "prefix_hash": "d4ffd7cbfa809bb843f6a5a9b9d83859cd30127be1b0d8daff950dcf6bbeadc2",
+      "actual_started_at": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "planned_order": 2,
+      "case_id": "01",
+      "group": "MC",
+      "run_id": "01-MC",
+      "checkpoint_hash": "b29f7da1d3cac564051cde85c812ac9a9187f32b552a8038a4b107b1bee03329",
+      "prefix_hash": "d4ffd7cbfa809bb843f6a5a9b9d83859cd30127be1b0d8daff950dcf6bbeadc2",
+      "actual_started_at": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "planned_order": 3,
+      "case_id": "02",
+      "group": "MC",
+      "run_id": "02-MC",
+      "checkpoint_hash": "29ceeba3c1331739b645be8787483ff69a874417af8c58664596fdbdec50209a",
+      "prefix_hash": "af16f4ec729149400aed99150fb3219f80bc3339f6a7f9ed5ef616889f9af7fa",
+      "actual_started_at": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "planned_order": 4,
+      "case_id": "02",
+      "group": "M",
+      "run_id": "02-M",
+      "checkpoint_hash": "29ceeba3c1331739b645be8787483ff69a874417af8c58664596fdbdec50209a",
+      "prefix_hash": "af16f4ec729149400aed99150fb3219f80bc3339f6a7f9ed5ef616889f9af7fa",
+      "actual_started_at": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "planned_order": 5,
+      "case_id": "03",
+      "group": "M",
+      "run_id": "03-M",
+      "checkpoint_hash": "b6fa5c70718b88c35db0852a328eaef5723482f2a1491e19588f909307283dea",
+      "prefix_hash": "b0228c1aed64361d70691cd52b2496087b4222431be28ac284f74a0993fdb223",
+      "actual_started_at": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "planned_order": 6,
+      "case_id": "03",
+      "group": "MC",
+      "run_id": "03-MC",
+      "checkpoint_hash": "b6fa5c70718b88c35db0852a328eaef5723482f2a1491e19588f909307283dea",
+      "prefix_hash": "b0228c1aed64361d70691cd52b2496087b4222431be28ac284f74a0993fdb223",
+      "actual_started_at": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "planned_order": 7,
+      "case_id": "04",
+      "group": "MC",
+      "run_id": "04-MC",
+      "checkpoint_hash": "c7ffd13833b80ca7d02424767163e8889b6afa1faca3f3c23e44a3351c35f454",
+      "prefix_hash": "d4ffd7cbfa809bb843f6a5a9b9d83859cd30127be1b0d8daff950dcf6bbeadc2",
+      "actual_started_at": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "planned_order": 8,
+      "case_id": "04",
+      "group": "M",
+      "run_id": "04-M",
+      "checkpoint_hash": "c7ffd13833b80ca7d02424767163e8889b6afa1faca3f3c23e44a3351c35f454",
+      "prefix_hash": "d4ffd7cbfa809bb843f6a5a9b9d83859cd30127be1b0d8daff950dcf6bbeadc2",
+      "actual_started_at": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "planned_order": 9,
+      "case_id": "05",
+      "group": "M",
+      "run_id": "05-M",
+      "checkpoint_hash": "9a2c7a9084c3f067821ac764467ffa91bf06ff992c870a3a7d2297d4caf8d1af",
+      "prefix_hash": "b0228c1aed64361d70691cd52b2496087b4222431be28ac284f74a0993fdb223",
+      "actual_started_at": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "planned_order": 10,
+      "case_id": "05",
+      "group": "MC",
+      "run_id": "05-MC",
+      "checkpoint_hash": "9a2c7a9084c3f067821ac764467ffa91bf06ff992c870a3a7d2297d4caf8d1af",
+      "prefix_hash": "b0228c1aed64361d70691cd52b2496087b4222431be28ac284f74a0993fdb223",
+      "actual_started_at": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "planned_order": 11,
+      "case_id": "06",
+      "group": "MC",
+      "run_id": "06-MC",
+      "checkpoint_hash": "46d891986ede7ae40eca3fd72a328125c9566e07aa26f53554945d9a50c43bb9",
+      "prefix_hash": "af16f4ec729149400aed99150fb3219f80bc3339f6a7f9ed5ef616889f9af7fa",
+      "actual_started_at": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "planned_order": 12,
+      "case_id": "06",
+      "group": "M",
+      "run_id": "06-M",
+      "checkpoint_hash": "46d891986ede7ae40eca3fd72a328125c9566e07aa26f53554945d9a50c43bb9",
+      "prefix_hash": "af16f4ec729149400aed99150fb3219f80bc3339f6a7f9ed5ef616889f9af7fa",
+      "actual_started_at": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "planned_order": 13,
+      "case_id": "07",
+      "group": "M",
+      "run_id": "07-M",
+      "checkpoint_hash": "d95fc813eac39c16e8138196314b8e61926cc85d8132cba0f5f2bdc2cafd421b",
+      "prefix_hash": "af16f4ec729149400aed99150fb3219f80bc3339f6a7f9ed5ef616889f9af7fa",
+      "actual_started_at": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "planned_order": 14,
+      "case_id": "07",
+      "group": "MC",
+      "run_id": "07-MC",
+      "checkpoint_hash": "d95fc813eac39c16e8138196314b8e61926cc85d8132cba0f5f2bdc2cafd421b",
+      "prefix_hash": "af16f4ec729149400aed99150fb3219f80bc3339f6a7f9ed5ef616889f9af7fa",
+      "actual_started_at": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "planned_order": 15,
+      "case_id": "08",
+      "group": "MC",
+      "run_id": "08-MC",
+      "checkpoint_hash": "891c1e1f4983a79972aea1a58cfa187fe68f09352ac2d2bdeedab23d771301ce",
+      "prefix_hash": "b0228c1aed64361d70691cd52b2496087b4222431be28ac284f74a0993fdb223",
+      "actual_started_at": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "planned_order": 16,
+      "case_id": "08",
+      "group": "M",
+      "run_id": "08-M",
+      "checkpoint_hash": "891c1e1f4983a79972aea1a58cfa187fe68f09352ac2d2bdeedab23d771301ce",
+      "prefix_hash": "b0228c1aed64361d70691cd52b2496087b4222431be28ac284f74a0993fdb223",
+      "actual_started_at": null,
+      "status": "NOT_RUN"
+    }
+  ],
+  "execution_policy": "Stop batch on interface error; keep request ledger; no automatic rerun"
+}

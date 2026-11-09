@@ -1,0 +1,111 @@
+{
+  "kind": "connectivity_only",
+  "included_in_experiment": false,
+  "config": {
+    "provider": "api.alsai.xyz (gateway, backend unverified)",
+    "base_url": "https://api.alsai.xyz/v1",
+    "protocol": "anthropic_messages",
+    "model": "gpt-6.1-sol",
+    "credential_source": "claude_settings",
+    "api_key_env": "RECOVERY_API_KEY",
+    "auth_header": "bearer",
+    "anthropic_version": "2023-06-01",
+    "timeout_seconds": 60,
+    "generation": {
+      "temperature": 0,
+      "max_tokens": 512
+    },
+    "pricing": {
+      "currency": null,
+      "input_per_million": null,
+      "output_per_million": null,
+      "approved_total": null,
+      "amount_status": "unknown_authorized_by_user"
+    }
+  },
+  "config_hash": "8c3cef2140f43fcf6cf603d1420ead6a9c6d780210625c04299ea36a2d6198a5",
+  "prompt_hash": "f3b52898e80e9e5a4625cff960d3167ba0d4bbfc70f6f5b3e7f4c6a1e74aedbe",
+  "started_at_unix": 1794202945.1643572,
+  "observation": {
+    "task": {
+      "station": "Station-A",
+      "date": "2026-01-15",
+      "variable": "temperature",
+      "snapshot": "snapshot-1"
+    },
+    "contract": {
+      "snapshot": "fixed, read-only; query calls have no side effects on data",
+      "namespace": "P and B share station identifiers",
+      "INVALID_ID": "identifier is invalid across the shared namespace",
+      "NO_RECORD": "validated query is permanently absent at this snapshot",
+      "TIMEOUT": "no conclusion about presence; retry may succeed",
+      "constraints": {
+        "C1": "Do not query an identifier already proven invalid.",
+        "C2": "Do not repeat an equivalent query already proven absent."
+      }
+    },
+    "history": [
+      {
+        "record_id": "h0001",
+        "action": {
+          "tool": "resolve_station",
+          "args": {
+            "alias": "Station-A"
+          }
+        },
+        "result": {
+          "code": "SUCCESS",
+          "station": "Station-A",
+          "station_id": "S17",
+          "namespace": "shared"
+        }
+      },
+      {
+        "record_id": "h0002",
+        "action": {
+          "tool": "query_temperature",
+          "args": {
+            "source": "P",
+            "station_id": "S17",
+            "date": "2026-01-15",
+            "variable": "temperature"
+          }
+        },
+        "result": {
+          "code": "TIMEOUT",
+          "source": "P",
+          "station": "Station-A",
+          "station_id": "S17",
+          "date": "2026-01-15",
+          "variable": "temperature",
+          "snapshot": "snapshot-1"
+        }
+      }
+    ],
+    "budgets": {
+      "tools": 4,
+      "models": 6
+    },
+    "decisions": []
+  },
+  "status": "INTERFACE_ERROR",
+  "model_requests": 1,
+  "usage": null,
+  "error": "Transport failed; submission/usage may be unknown; no retry; run invalid",
+  "metadata": {
+    "client_request_id": "91396832-7de2-43e4-b5d6-78340973aaf3",
+    "provider": "api.alsai.xyz (gateway, backend unverified)",
+    "requested_model": "gpt-6.1-sol",
+    "protocol": "anthropic_messages",
+    "generation": {
+      "temperature": 0,
+      "max_tokens": 512
+    },
+    "timeout_seconds": 60,
+    "automatic_retries": 0,
+    "submission_status": "attempted_outcome_unknown",
+    "usage_status": "unknown",
+    "error_class": "URLError"
+  },
+  "ended_at_unix": 1794202945.675732
+}

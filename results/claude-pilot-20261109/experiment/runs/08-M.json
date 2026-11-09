@@ -1,0 +1,1031 @@
+{
+  "spec_version": "v0.1",
+  "runtime_revision": "api-preparation-1",
+  "valid_for_task_statistics": true,
+  "prompt_hash": "f3b52898e80e9e5a4625cff960d3167ba0d4bbfc70f6f5b3e7f4c6a1e74aedbe",
+  "run_kind": "real_model",
+  "run_id": "08-M",
+  "case_id": "08",
+  "group": "M",
+  "task": {
+    "station": "Station-A",
+    "date": "2026-01-15",
+    "variable": "temperature",
+    "snapshot": "snapshot-1"
+  },
+  "initial_prompt": "Query the temperature for the station, date, and variable in the supplied task.\nReturn exactly one JSON action per response, without Markdown or additional text.\n\nAvailable actions and exact argument fields\n{\"tool\":\"resolve_station\",\"args\":{\"alias\":\"<task station>\"}}\n{\"tool\":\"query_temperature\",\"args\":{\"source\":\"<source>\",\"station_id\":\"<standard identifier>\",\"date\":\"YYYY-MM-DD\",\"variable\":\"temperature\"}}\n{\"tool\":\"finish\",\"args\":{\"status\":\"<status>\",\"answer\":{}}}\n\nquery_temperature accepts source P or B. Both sources are acceptable answers.\nfinish accepts status answer, no_record, or incomplete. An answer must contain\nstation, date, variable, source, temperature_c, and snapshot.\n\nThe observation contains the task, tool contract, complete executed history,\nprevious proposals and feedback, and remaining budgets.\nBoth sources share standard station identifiers. resolve_station deterministically\nreturns the standard identifier for the task alias and always succeeds.\nIdentifier validation occurs before record lookup. INVALID_ID proves that the\nidentifier is invalid throughout the shared namespace.\nNO_RECORD is returned only after parameter validation and proves absence for\nthat source, station, date, variable, and snapshot. The snapshot is fixed and\nread-only. TIMEOUT proves neither presence nor absence; retry may succeed.\n\nApply these two constraints when choosing an action.\nC1. Do not query an identifier already proven invalid in the shared namespace.\nC2. Do not repeat a query already proven absent for the same source, standard\nstation, date, variable, and snapshot. Changed parameters or sources require\ntheir own evidence. A timeout alone does not justify excluding a retry.\n\nThe recovery phase allows at most four executed tool calls and six model calls.\nThe remaining budgets in the observation are measured before this response.\nThis response consumes one model call. A rejected proposal or format error also\nconsumes a model call; choosing again requires another call. Only executed tools\nconsume tool budget. Each tool return is checked for valid target data or complete\ntwo-source absence evidence before budget exhaustion is checked. Completion is\ncollected automatically when that evidence is present. Without sufficient\nevidence, report incomplete if you choose to stop. A no_record claim requires\nabsence evidence from both sources. Select your next action using the observation.\n",
+  "contract": {
+    "snapshot": "fixed, read-only; query calls have no side effects on data",
+    "namespace": "P and B share station identifiers",
+    "INVALID_ID": "identifier is invalid across the shared namespace",
+    "NO_RECORD": "validated query is permanently absent at this snapshot",
+    "TIMEOUT": "no conclusion about presence; retry may succeed",
+    "constraints": {
+      "C1": "Do not query an identifier already proven invalid.",
+      "C2": "Do not repeat an equivalent query already proven absent."
+    }
+  },
+  "limits": {
+    "tools": 4,
+    "models": 6
+  },
+  "initial_checkpoint_hash": "891c1e1f4983a79972aea1a58cfa187fe68f09352ac2d2bdeedab23d771301ce",
+  "prefix": [
+    {
+      "record_id": "h0001",
+      "action": {
+        "tool": "resolve_station",
+        "args": {
+          "alias": "Station-A"
+        }
+      },
+      "result": {
+        "code": "SUCCESS",
+        "station": "Station-A",
+        "station_id": "S17",
+        "namespace": "shared"
+      }
+    },
+    {
+      "record_id": "h0002",
+      "action": {
+        "tool": "query_temperature",
+        "args": {
+          "source": "P",
+          "station_id": "S17",
+          "date": "2026-01-15",
+          "variable": "temperature"
+        }
+      },
+      "result": {
+        "code": "TIMEOUT",
+        "source": "P",
+        "station": "Station-A",
+        "station_id": "S17",
+        "date": "2026-01-15",
+        "variable": "temperature",
+        "snapshot": "snapshot-1"
+      }
+    }
+  ],
+  "audit_initial_state": {
+    "case": {
+      "case_id": "08",
+      "description": "persistent timeout and missing backup",
+      "prefix": [
+        {
+          "tool": "resolve_station",
+          "args": {
+            "alias": "Station-A"
+          }
+        },
+        {
+          "tool": "query_temperature",
+          "args": {
+            "source": "P",
+            "station_id": "S17",
+            "date": "2026-01-15",
+            "variable": "temperature"
+          }
+        }
+      ],
+      "schedules": {
+        "P": [
+          "TIMEOUT"
+        ],
+        "B": [
+          "NO_RECORD"
+        ]
+      },
+      "expected": "incomplete",
+      "task": {
+        "station": "Station-A",
+        "date": "2026-01-15",
+        "variable": "temperature",
+        "snapshot": "snapshot-1"
+      }
+    },
+    "counts": {
+      "[\"query_temperature\",\"P\",\"S17\",\"2026-01-15\",\"temperature\",\"snapshot-1\"]": 1
+    },
+    "resolve_calls": 1
+  },
+  "audit_final_state": {
+    "case": {
+      "case_id": "08",
+      "description": "persistent timeout and missing backup",
+      "prefix": [
+        {
+          "tool": "resolve_station",
+          "args": {
+            "alias": "Station-A"
+          }
+        },
+        {
+          "tool": "query_temperature",
+          "args": {
+            "source": "P",
+            "station_id": "S17",
+            "date": "2026-01-15",
+            "variable": "temperature"
+          }
+        }
+      ],
+      "schedules": {
+        "P": [
+          "TIMEOUT"
+        ],
+        "B": [
+          "NO_RECORD"
+        ]
+      },
+      "expected": "incomplete",
+      "task": {
+        "station": "Station-A",
+        "date": "2026-01-15",
+        "variable": "temperature",
+        "snapshot": "snapshot-1"
+      }
+    },
+    "counts": {
+      "[\"query_temperature\",\"P\",\"S17\",\"2026-01-15\",\"temperature\",\"snapshot-1\"]": 3,
+      "[\"query_temperature\",\"B\",\"S17\",\"2026-01-15\",\"temperature\",\"snapshot-1\"]": 1
+    },
+    "resolve_calls": 1
+  },
+  "events": [
+    {
+      "step": 1,
+      "run_id": "08-M",
+      "started_at_unix": 1794203497.996587,
+      "observation": {
+        "task": {
+          "station": "Station-A",
+          "date": "2026-01-15",
+          "variable": "temperature",
+          "snapshot": "snapshot-1"
+        },
+        "contract": {
+          "snapshot": "fixed, read-only; query calls have no side effects on data",
+          "namespace": "P and B share station identifiers",
+          "INVALID_ID": "identifier is invalid across the shared namespace",
+          "NO_RECORD": "validated query is permanently absent at this snapshot",
+          "TIMEOUT": "no conclusion about presence; retry may succeed",
+          "constraints": {
+            "C1": "Do not query an identifier already proven invalid.",
+            "C2": "Do not repeat an equivalent query already proven absent."
+          }
+        },
+        "history": [
+          {
+            "record_id": "h0001",
+            "action": {
+              "tool": "resolve_station",
+              "args": {
+                "alias": "Station-A"
+              }
+            },
+            "result": {
+              "code": "SUCCESS",
+              "station": "Station-A",
+              "station_id": "S17",
+              "namespace": "shared"
+            }
+          },
+          {
+            "record_id": "h0002",
+            "action": {
+              "tool": "query_temperature",
+              "args": {
+                "source": "P",
+                "station_id": "S17",
+                "date": "2026-01-15",
+                "variable": "temperature"
+              }
+            },
+            "result": {
+              "code": "TIMEOUT",
+              "source": "P",
+              "station": "Station-A",
+              "station_id": "S17",
+              "date": "2026-01-15",
+              "variable": "temperature",
+              "snapshot": "snapshot-1"
+            }
+          }
+        ],
+        "budgets": {
+          "tools": 4,
+          "models": 6
+        },
+        "decisions": []
+      },
+      "proposal_source": "real_model",
+      "raw_response": "{\"tool\":\"query_temperature\",\"args\":{\"source\":\"P\",\"station_id\":\"S17\",\"date\":\"2026-01-15\",\"variable\":\"temperature\"}}",
+      "action": {
+        "tool": "query_temperature",
+        "args": {
+          "source": "P",
+          "station_id": "S17",
+          "date": "2026-01-15",
+          "variable": "temperature"
+        }
+      },
+      "feedback": null,
+      "check": {
+        "enabled": false,
+        "decision": "not_checked"
+      },
+      "executed": true,
+      "tool_result": {
+        "code": "TIMEOUT",
+        "source": "P",
+        "station": "Station-A",
+        "station_id": "S17",
+        "date": "2026-01-15",
+        "variable": "temperature",
+        "snapshot": "snapshot-1"
+      },
+      "history_record_id": "h0003",
+      "budgets_before": {
+        "tools": 4,
+        "models": 6
+      },
+      "usage": {
+        "input_tokens": 4379,
+        "output_tokens": 58,
+        "other_tokens": 0
+      },
+      "usage_unavailable_reason": null,
+      "model_metadata": {
+        "client_request_id": "91916b57-eb05-4fea-a8d0-f7b263cfa027",
+        "provider": "api.alsai.xyz (gateway, backend unverified)",
+        "requested_model": "claude-sonnet-4-6",
+        "protocol": "anthropic_messages",
+        "generation": {
+          "temperature": 0,
+          "max_tokens": 512
+        },
+        "timeout_seconds": 60,
+        "automatic_retries": 0,
+        "submission_status": "response_received",
+        "usage_status": "known",
+        "http_status": 200,
+        "provider_request_id": "f8b49e6b-fbe6-489b-acc9-1da68245f326",
+        "raw_http_response": "{\"id\":\"msg_01hUu430gwOgZtwxaCgHN9O7\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-sonnet-4-6\",\"content\":[{\"type\":\"text\",\"text\":\"{\\\"tool\\\":\\\"query_temperature\\\",\\\"args\\\":{\\\"source\\\":\\\"P\\\",\\\"station_id\\\":\\\"S17\\\",\\\"date\\\":\\\"2026-01-15\\\",\\\"variable\\\":\\\"temperature\\\"}}\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":1116},\"cache_creation_input_tokens\":1116,\"cache_read_input_tokens\":3257,\"input_tokens\":6,\"output_tokens\":58}}",
+        "returned_model": "claude-sonnet-4-6",
+        "response_id": "msg_01hUu430gwOgZtwxaCgHN9O7",
+        "raw_usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 1116
+          },
+          "cache_creation_input_tokens": 1116,
+          "cache_read_input_tokens": 3257,
+          "input_tokens": 6,
+          "output_tokens": 58
+        },
+        "finish_reason": "end_turn"
+      },
+      "model_call_ms": 2449.652667157352,
+      "check_ms": 0.0,
+      "tool_ms": 0.029084039852023125,
+      "step_ms": 2449.8845420312136,
+      "audit": {
+        "state_before": "891c1e1f4983a79972aea1a58cfa187fe68f09352ac2d2bdeedab23d771301ce",
+        "query_counter_changes": {
+          "[\"query_temperature\",\"P\",\"S17\",\"2026-01-15\",\"temperature\",\"snapshot-1\"]": {
+            "before": 1,
+            "after": 2
+          }
+        },
+        "state_after": "c83161890445512911527da2eb9c9e3adafcde2f4b5d7dbd09689ddda951b50b"
+      },
+      "budgets_after": {
+        "tools": 3,
+        "models": 5
+      },
+      "model_call_index": 1,
+      "ended_at_unix": 1794203500.446552,
+      "outcome": null,
+      "termination": null,
+      "offline_check": {
+        "decision": "allow"
+      }
+    },
+    {
+      "step": 2,
+      "run_id": "08-M",
+      "started_at_unix": 1794203500.44661,
+      "observation": {
+        "task": {
+          "station": "Station-A",
+          "date": "2026-01-15",
+          "variable": "temperature",
+          "snapshot": "snapshot-1"
+        },
+        "contract": {
+          "snapshot": "fixed, read-only; query calls have no side effects on data",
+          "namespace": "P and B share station identifiers",
+          "INVALID_ID": "identifier is invalid across the shared namespace",
+          "NO_RECORD": "validated query is permanently absent at this snapshot",
+          "TIMEOUT": "no conclusion about presence; retry may succeed",
+          "constraints": {
+            "C1": "Do not query an identifier already proven invalid.",
+            "C2": "Do not repeat an equivalent query already proven absent."
+          }
+        },
+        "history": [
+          {
+            "record_id": "h0001",
+            "action": {
+              "tool": "resolve_station",
+              "args": {
+                "alias": "Station-A"
+              }
+            },
+            "result": {
+              "code": "SUCCESS",
+              "station": "Station-A",
+              "station_id": "S17",
+              "namespace": "shared"
+            }
+          },
+          {
+            "record_id": "h0002",
+            "action": {
+              "tool": "query_temperature",
+              "args": {
+                "source": "P",
+                "station_id": "S17",
+                "date": "2026-01-15",
+                "variable": "temperature"
+              }
+            },
+            "result": {
+              "code": "TIMEOUT",
+              "source": "P",
+              "station": "Station-A",
+              "station_id": "S17",
+              "date": "2026-01-15",
+              "variable": "temperature",
+              "snapshot": "snapshot-1"
+            }
+          },
+          {
+            "record_id": "h0003",
+            "action": {
+              "tool": "query_temperature",
+              "args": {
+                "source": "P",
+                "station_id": "S17",
+                "date": "2026-01-15",
+                "variable": "temperature"
+              }
+            },
+            "result": {
+              "code": "TIMEOUT",
+              "source": "P",
+              "station": "Station-A",
+              "station_id": "S17",
+              "date": "2026-01-15",
+              "variable": "temperature",
+              "snapshot": "snapshot-1"
+            }
+          }
+        ],
+        "budgets": {
+          "tools": 3,
+          "models": 5
+        },
+        "decisions": [
+          {
+            "action": {
+              "tool": "query_temperature",
+              "args": {
+                "source": "P",
+                "station_id": "S17",
+                "date": "2026-01-15",
+                "variable": "temperature"
+              }
+            },
+            "feedback": null,
+            "executed": true
+          }
+        ]
+      },
+      "proposal_source": "real_model",
+      "raw_response": "{\"tool\":\"query_temperature\",\"args\":{\"source\":\"B\",\"station_id\":\"S17\",\"date\":\"2026-01-15\",\"variable\":\"temperature\"}}",
+      "action": {
+        "tool": "query_temperature",
+        "args": {
+          "source": "B",
+          "station_id": "S17",
+          "date": "2026-01-15",
+          "variable": "temperature"
+        }
+      },
+      "feedback": null,
+      "check": {
+        "enabled": false,
+        "decision": "not_checked"
+      },
+      "executed": true,
+      "tool_result": {
+        "code": "NO_RECORD",
+        "source": "B",
+        "station": "Station-A",
+        "station_id": "S17",
+        "date": "2026-01-15",
+        "variable": "temperature",
+        "snapshot": "snapshot-1"
+      },
+      "history_record_id": "h0004",
+      "budgets_before": {
+        "tools": 3,
+        "models": 5
+      },
+      "usage": {
+        "input_tokens": 5314,
+        "output_tokens": 58,
+        "other_tokens": 0
+      },
+      "usage_unavailable_reason": null,
+      "model_metadata": {
+        "client_request_id": "2f250b68-e8c0-42ed-ac38-70baebe65232",
+        "provider": "api.alsai.xyz (gateway, backend unverified)",
+        "requested_model": "claude-sonnet-4-6",
+        "protocol": "anthropic_messages",
+        "generation": {
+          "temperature": 0,
+          "max_tokens": 512
+        },
+        "timeout_seconds": 60,
+        "automatic_retries": 0,
+        "submission_status": "response_received",
+        "usage_status": "known",
+        "http_status": 200,
+        "provider_request_id": "71ee1bd1-34d1-413c-a61e-b09b9f094491",
+        "raw_http_response": "{\"id\":\"msg_011FgTLpm1MrhfiOZkCJw20g\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-sonnet-4-6\",\"content\":[{\"type\":\"text\",\"text\":\"{\\\"tool\\\":\\\"query_temperature\\\",\\\"args\\\":{\\\"source\\\":\\\"B\\\",\\\"station_id\\\":\\\"S17\\\",\\\"date\\\":\\\"2026-01-15\\\",\\\"variable\\\":\\\"temperature\\\"}}\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":1356},\"cache_creation_input_tokens\":1356,\"cache_read_input_tokens\":3952,\"input_tokens\":6,\"output_tokens\":58}}",
+        "returned_model": "claude-sonnet-4-6",
+        "response_id": "msg_011FgTLpm1MrhfiOZkCJw20g",
+        "raw_usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 1356
+          },
+          "cache_creation_input_tokens": 1356,
+          "cache_read_input_tokens": 3952,
+          "input_tokens": 6,
+          "output_tokens": 58
+        },
+        "finish_reason": "end_turn"
+      },
+      "model_call_ms": 2832.9658329021186,
+      "check_ms": 0.0,
+      "tool_ms": 0.025292159989476204,
+      "step_ms": 2833.179666195065,
+      "audit": {
+        "state_before": "c83161890445512911527da2eb9c9e3adafcde2f4b5d7dbd09689ddda951b50b",
+        "query_counter_changes": {
+          "[\"query_temperature\",\"B\",\"S17\",\"2026-01-15\",\"temperature\",\"snapshot-1\"]": {
+            "before": 0,
+            "after": 1
+          }
+        },
+        "state_after": "4580bc9c5cef8c19fa0d16014cb718a7b9c49ea49d46bf46aac67ce690230333"
+      },
+      "budgets_after": {
+        "tools": 2,
+        "models": 4
+      },
+      "model_call_index": 2,
+      "ended_at_unix": 1794203503.279839,
+      "outcome": null,
+      "termination": null,
+      "offline_check": {
+        "decision": "allow"
+      }
+    },
+    {
+      "step": 3,
+      "run_id": "08-M",
+      "started_at_unix": 1794203503.279892,
+      "observation": {
+        "task": {
+          "station": "Station-A",
+          "date": "2026-01-15",
+          "variable": "temperature",
+          "snapshot": "snapshot-1"
+        },
+        "contract": {
+          "snapshot": "fixed, read-only; query calls have no side effects on data",
+          "namespace": "P and B share station identifiers",
+          "INVALID_ID": "identifier is invalid across the shared namespace",
+          "NO_RECORD": "validated query is permanently absent at this snapshot",
+          "TIMEOUT": "no conclusion about presence; retry may succeed",
+          "constraints": {
+            "C1": "Do not query an identifier already proven invalid.",
+            "C2": "Do not repeat an equivalent query already proven absent."
+          }
+        },
+        "history": [
+          {
+            "record_id": "h0001",
+            "action": {
+              "tool": "resolve_station",
+              "args": {
+                "alias": "Station-A"
+              }
+            },
+            "result": {
+              "code": "SUCCESS",
+              "station": "Station-A",
+              "station_id": "S17",
+              "namespace": "shared"
+            }
+          },
+          {
+            "record_id": "h0002",
+            "action": {
+              "tool": "query_temperature",
+              "args": {
+                "source": "P",
+                "station_id": "S17",
+                "date": "2026-01-15",
+                "variable": "temperature"
+              }
+            },
+            "result": {
+              "code": "TIMEOUT",
+              "source": "P",
+              "station": "Station-A",
+              "station_id": "S17",
+              "date": "2026-01-15",
+              "variable": "temperature",
+              "snapshot": "snapshot-1"
+            }
+          },
+          {
+            "record_id": "h0003",
+            "action": {
+              "tool": "query_temperature",
+              "args": {
+                "source": "P",
+                "station_id": "S17",
+                "date": "2026-01-15",
+                "variable": "temperature"
+              }
+            },
+            "result": {
+              "code": "TIMEOUT",
+              "source": "P",
+              "station": "Station-A",
+              "station_id": "S17",
+              "date": "2026-01-15",
+              "variable": "temperature",
+              "snapshot": "snapshot-1"
+            }
+          },
+          {
+            "record_id": "h0004",
+            "action": {
+              "tool": "query_temperature",
+              "args": {
+                "source": "B",
+                "station_id": "S17",
+                "date": "2026-01-15",
+                "variable": "temperature"
+              }
+            },
+            "result": {
+              "code": "NO_RECORD",
+              "source": "B",
+              "station": "Station-A",
+              "station_id": "S17",
+              "date": "2026-01-15",
+              "variable": "temperature",
+              "snapshot": "snapshot-1"
+            }
+          }
+        ],
+        "budgets": {
+          "tools": 2,
+          "models": 4
+        },
+        "decisions": [
+          {
+            "action": {
+              "tool": "query_temperature",
+              "args": {
+                "source": "P",
+                "station_id": "S17",
+                "date": "2026-01-15",
+                "variable": "temperature"
+              }
+            },
+            "feedback": null,
+            "executed": true
+          },
+          {
+            "action": {
+              "tool": "query_temperature",
+              "args": {
+                "source": "B",
+                "station_id": "S17",
+                "date": "2026-01-15",
+                "variable": "temperature"
+              }
+            },
+            "feedback": null,
+            "executed": true
+          }
+        ]
+      },
+      "proposal_source": "real_model",
+      "raw_response": "{\"tool\":\"query_temperature\",\"args\":{\"source\":\"P\",\"station_id\":\"S17\",\"date\":\"2026-01-15\",\"variable\":\"temperature\"}}",
+      "action": {
+        "tool": "query_temperature",
+        "args": {
+          "source": "P",
+          "station_id": "S17",
+          "date": "2026-01-15",
+          "variable": "temperature"
+        }
+      },
+      "feedback": null,
+      "check": {
+        "enabled": false,
+        "decision": "not_checked"
+      },
+      "executed": true,
+      "tool_result": {
+        "code": "TIMEOUT",
+        "source": "P",
+        "station": "Station-A",
+        "station_id": "S17",
+        "date": "2026-01-15",
+        "variable": "temperature",
+        "snapshot": "snapshot-1"
+      },
+      "history_record_id": "h0005",
+      "budgets_before": {
+        "tools": 2,
+        "models": 4
+      },
+      "usage": {
+        "input_tokens": 6880,
+        "output_tokens": 58,
+        "other_tokens": 0
+      },
+      "usage_unavailable_reason": null,
+      "model_metadata": {
+        "client_request_id": "008a2bdc-5c00-4d5f-a7af-6a047f9ad09b",
+        "provider": "api.alsai.xyz (gateway, backend unverified)",
+        "requested_model": "claude-sonnet-4-6",
+        "protocol": "anthropic_messages",
+        "generation": {
+          "temperature": 0,
+          "max_tokens": 512
+        },
+        "timeout_seconds": 60,
+        "automatic_retries": 0,
+        "submission_status": "response_received",
+        "usage_status": "known",
+        "http_status": 200,
+        "provider_request_id": "ba2cbb11-58b2-4217-95c0-81e75a68ba23",
+        "raw_http_response": "{\"id\":\"msg_01w8hNYj5PL8qvD0jbjpPpzV\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-sonnet-4-6\",\"content\":[{\"type\":\"text\",\"text\":\"{\\\"tool\\\":\\\"query_temperature\\\",\\\"args\\\":{\\\"source\\\":\\\"P\\\",\\\"station_id\\\":\\\"S17\\\",\\\"date\\\":\\\"2026-01-15\\\",\\\"variable\\\":\\\"temperature\\\"}}\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":1755},\"cache_creation_input_tokens\":1755,\"cache_read_input_tokens\":5119,\"input_tokens\":6,\"output_tokens\":58}}",
+        "returned_model": "claude-sonnet-4-6",
+        "response_id": "msg_01w8hNYj5PL8qvD0jbjpPpzV",
+        "raw_usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 1755
+          },
+          "cache_creation_input_tokens": 1755,
+          "cache_read_input_tokens": 5119,
+          "input_tokens": 6,
+          "output_tokens": 58
+        },
+        "finish_reason": "end_turn"
+      },
+      "model_call_ms": 2489.212749991566,
+      "check_ms": 0.0,
+      "tool_ms": 0.029750168323516846,
+      "step_ms": 2489.4605830777436,
+      "audit": {
+        "state_before": "4580bc9c5cef8c19fa0d16014cb718a7b9c49ea49d46bf46aac67ce690230333",
+        "query_counter_changes": {
+          "[\"query_temperature\",\"P\",\"S17\",\"2026-01-15\",\"temperature\",\"snapshot-1\"]": {
+            "before": 2,
+            "after": 3
+          }
+        },
+        "state_after": "2597f784cbbdbba96b48c38dac7a186ca861bb012d9842ca368a54dd3073316e"
+      },
+      "budgets_after": {
+        "tools": 1,
+        "models": 3
+      },
+      "model_call_index": 3,
+      "ended_at_unix": 1794203505.769415,
+      "outcome": null,
+      "termination": null,
+      "offline_check": {
+        "decision": "allow"
+      }
+    },
+    {
+      "step": 4,
+      "run_id": "08-M",
+      "started_at_unix": 1794203505.769495,
+      "observation": {
+        "task": {
+          "station": "Station-A",
+          "date": "2026-01-15",
+          "variable": "temperature",
+          "snapshot": "snapshot-1"
+        },
+        "contract": {
+          "snapshot": "fixed, read-only; query calls have no side effects on data",
+          "namespace": "P and B share station identifiers",
+          "INVALID_ID": "identifier is invalid across the shared namespace",
+          "NO_RECORD": "validated query is permanently absent at this snapshot",
+          "TIMEOUT": "no conclusion about presence; retry may succeed",
+          "constraints": {
+            "C1": "Do not query an identifier already proven invalid.",
+            "C2": "Do not repeat an equivalent query already proven absent."
+          }
+        },
+        "history": [
+          {
+            "record_id": "h0001",
+            "action": {
+              "tool": "resolve_station",
+              "args": {
+                "alias": "Station-A"
+              }
+            },
+            "result": {
+              "code": "SUCCESS",
+              "station": "Station-A",
+              "station_id": "S17",
+              "namespace": "shared"
+            }
+          },
+          {
+            "record_id": "h0002",
+            "action": {
+              "tool": "query_temperature",
+              "args": {
+                "source": "P",
+                "station_id": "S17",
+                "date": "2026-01-15",
+                "variable": "temperature"
+              }
+            },
+            "result": {
+              "code": "TIMEOUT",
+              "source": "P",
+              "station": "Station-A",
+              "station_id": "S17",
+              "date": "2026-01-15",
+              "variable": "temperature",
+              "snapshot": "snapshot-1"
+            }
+          },
+          {
+            "record_id": "h0003",
+            "action": {
+              "tool": "query_temperature",
+              "args": {
+                "source": "P",
+                "station_id": "S17",
+                "date": "2026-01-15",
+                "variable": "temperature"
+              }
+            },
+            "result": {
+              "code": "TIMEOUT",
+              "source": "P",
+              "station": "Station-A",
+              "station_id": "S17",
+              "date": "2026-01-15",
+              "variable": "temperature",
+              "snapshot": "snapshot-1"
+            }
+          },
+          {
+            "record_id": "h0004",
+            "action": {
+              "tool": "query_temperature",
+              "args": {
+                "source": "B",
+                "station_id": "S17",
+                "date": "2026-01-15",
+                "variable": "temperature"
+              }
+            },
+            "result": {
+              "code": "NO_RECORD",
+              "source": "B",
+              "station": "Station-A",
+              "station_id": "S17",
+              "date": "2026-01-15",
+              "variable": "temperature",
+              "snapshot": "snapshot-1"
+            }
+          },
+          {
+            "record_id": "h0005",
+            "action": {
+              "tool": "query_temperature",
+              "args": {
+                "source": "P",
+                "station_id": "S17",
+                "date": "2026-01-15",
+                "variable": "temperature"
+              }
+            },
+            "result": {
+              "code": "TIMEOUT",
+              "source": "P",
+              "station": "Station-A",
+              "station_id": "S17",
+              "date": "2026-01-15",
+              "variable": "temperature",
+              "snapshot": "snapshot-1"
+            }
+          }
+        ],
+        "budgets": {
+          "tools": 1,
+          "models": 3
+        },
+        "decisions": [
+          {
+            "action": {
+              "tool": "query_temperature",
+              "args": {
+                "source": "P",
+                "station_id": "S17",
+                "date": "2026-01-15",
+                "variable": "temperature"
+              }
+            },
+            "feedback": null,
+            "executed": true
+          },
+          {
+            "action": {
+              "tool": "query_temperature",
+              "args": {
+                "source": "B",
+                "station_id": "S17",
+                "date": "2026-01-15",
+                "variable": "temperature"
+              }
+            },
+            "feedback": null,
+            "executed": true
+          },
+          {
+            "action": {
+              "tool": "query_temperature",
+              "args": {
+                "source": "P",
+                "station_id": "S17",
+                "date": "2026-01-15",
+                "variable": "temperature"
+              }
+            },
+            "feedback": null,
+            "executed": true
+          }
+        ]
+      },
+      "proposal_source": "real_model",
+      "raw_response": "{\"tool\":\"finish\",\"args\":{\"status\":\"incomplete\",\"answer\":{}}}",
+      "action": {
+        "tool": "finish",
+        "args": {
+          "status": "incomplete",
+          "answer": {}
+        }
+      },
+      "feedback": null,
+      "check": {
+        "enabled": false,
+        "decision": "not_checked"
+      },
+      "executed": false,
+      "tool_result": null,
+      "history_record_id": null,
+      "budgets_before": {
+        "tools": 1,
+        "models": 3
+      },
+      "usage": {
+        "input_tokens": 7910,
+        "output_tokens": 30,
+        "other_tokens": 0
+      },
+      "usage_unavailable_reason": null,
+      "model_metadata": {
+        "client_request_id": "ccb532ec-a27e-4728-8274-1ef3ad32a873",
+        "provider": "api.alsai.xyz (gateway, backend unverified)",
+        "requested_model": "claude-sonnet-4-6",
+        "protocol": "anthropic_messages",
+        "generation": {
+          "temperature": 0,
+          "max_tokens": 512
+        },
+        "timeout_seconds": 60,
+        "automatic_retries": 0,
+        "submission_status": "response_received",
+        "usage_status": "known",
+        "http_status": 200,
+        "provider_request_id": "028304f1-0928-499f-aaa8-dec0e1506d94",
+        "raw_http_response": "{\"id\":\"msg_01NZxCgvXCGB7K0zCUgE4qU1\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-sonnet-4-6\",\"content\":[{\"type\":\"text\",\"text\":\"{\\\"tool\\\":\\\"finish\\\",\\\"args\\\":{\\\"status\\\":\\\"incomplete\\\",\\\"answer\\\":{}}}\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"cache_creation\":{\"ephemeral_1h_input_tokens\":2010,\"ephemeral_5m_input_tokens\":0},\"cache_creation_input_tokens\":2010,\"cache_read_input_tokens\":5894,\"input_tokens\":6,\"output_tokens\":30}}",
+        "returned_model": "claude-sonnet-4-6",
+        "response_id": "msg_01NZxCgvXCGB7K0zCUgE4qU1",
+        "raw_usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 2010,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 2010,
+          "cache_read_input_tokens": 5894,
+          "input_tokens": 6,
+          "output_tokens": 30
+        },
+        "finish_reason": "end_turn"
+      },
+      "model_call_ms": 2306.7365831229836,
+      "check_ms": 0.0,
+      "tool_ms": 0.0,
+      "step_ms": 2306.9947080221027,
+      "audit": {
+        "state_before": "2597f784cbbdbba96b48c38dac7a186ca861bb012d9842ca368a54dd3073316e",
+        "state_after": "2597f784cbbdbba96b48c38dac7a186ca861bb012d9842ca368a54dd3073316e"
+      },
+      "finish_claim": {
+        "status": "incomplete",
+        "answer": {}
+      },
+      "budgets_after": {
+        "tools": 1,
+        "models": 2
+      },
+      "model_call_index": 4,
+      "ended_at_unix": 1794203508.076544,
+      "outcome": "incomplete",
+      "termination": "active_finish",
+      "offline_check": {
+        "decision": "allow"
+      }
+    }
+  ],
+  "outcome": "incomplete",
+  "termination": "active_finish",
+  "answer": null,
+  "expected_fixture_outcome": "incomplete",
+  "totals": {
+    "tool_calls": 3,
+    "model_calls": 4,
+    "tokens": {
+      "input_tokens": 24483,
+      "output_tokens": 204,
+      "other_tokens": 0
+    },
+    "elapsed_ms": 10079.972625011578,
+    "fee": null
+  },
+  "claim_errors": [],
+  "actual_order": 16,
+  "configuration": {
+    "provider": "api.alsai.xyz (gateway, backend unverified)",
+    "base_url": "https://api.alsai.xyz/v1",
+    "protocol": "anthropic_messages",
+    "model": "claude-sonnet-4-6",
+    "credential_source": "claude_settings",
+    "api_key_env": "RECOVERY_API_KEY",
+    "auth_header": "bearer",
+    "anthropic_version": "2023-06-01",
+    "timeout_seconds": 60,
+    "generation": {
+      "temperature": 0,
+      "max_tokens": 512
+    },
+    "pricing": {
+      "currency": null,
+      "input_per_million": null,
+      "output_per_million": null,
+      "approved_total": null,
+      "amount_status": "unknown_authorized_by_user"
+    },
+    "ca_file": "/etc/ssl/cert.pem"
+  },
+  "actual_started_at": 1794203497.9875772,
+  "actual_ended_at": 1794203508.076752
+}
