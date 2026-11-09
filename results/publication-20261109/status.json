@@ -1,0 +1,30 @@
+{
+  "checked_at_utc": "2026-11-09T12:29:29.291085+00:00",
+  "repository": "https://github.com/YoreJ/-",
+  "repository_public": true,
+  "remote_empty_before_push": true,
+  "push_exit_code": 128,
+  "push_error": "fatal: could not read Username for https://github.com: terminal prompts disabled",
+  "force_push": false,
+  "uploaded": false,
+  "new_model_requests": 0,
+  "offline_tests_passed": 46,
+  "pdf_pages": 13,
+  "evidence_paths_checked": 29,
+  "missing_evidence_files": [],
+  "editable_format": "LaTeX native template and Markdown",
+  "chat_export_cutoff": "See conversations/export-manifest.json",
+  "remaining_steps": [
+    "Complete local GitHub authentication",
+    "git push -u origin main",
+    "Verify public report, code and evidence URLs"
+  ],
+  "personal_fields_pending": [
+    "name",
+    "student ID",
+    "institute",
+    "course",
+    "teacher",
+    "personal reflection"
+  ]
+}
