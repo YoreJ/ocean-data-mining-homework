@@ -1,2 +1,1 @@
 # 实验与离线测试仅使用 Python 3.10+ 标准库，无 pip 依赖。
-# 正式报告编译另需 XeLaTeX、BibTeX 和 README 中说明的字体。
