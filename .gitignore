@@ -1,8 +1,14 @@
-# 仅发布实验代码、必要运行依赖、最终报告和指定聊天记录。
+# 默认忽略。仅纳入下列课程交付文件。
+# 本地凭据、配置、原始请求日志、缓存、构建过程文件和临时导出均留在本地。
 *
+
+# 项目说明、实验代码、离线测试及无凭据配置示例
 !/.gitignore
 !/README.md
 !/experiment.py
+!/benchmark_recovery.py
+!/benchmark_versioned_recovery.py
+!/versioned_recovery.py
 !/model_connection.py
 !/run_real.py
 !/test_experiment.py
@@ -11,14 +17,22 @@
 !/model_prompt.txt
 !/model_config.example.json
 !/requirements.txt
+
+# 实验案例和可复现的离线结果
 !/cases/
 !/cases/cases.json
+!/cases/recovery-benchmark.json
+!/cases/versioned-recovery-benchmark.json
+
+# 真实模型实验入口校验所需的冻结文件
 !/frozen/
 !/frozen/v0.1/
 !/frozen/v0.1/README.md
 !/frozen/v0.1/experiment.py
 !/frozen/v0.1/manifest.json
 !/frozen/v0.1/test_experiment.py
+
+# 已确认的报告和指定对话
 !/report/
 !/report/正式报告.pdf
 !/conversations/
